@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar />  
           <Route exact path="/" render={() => <div>Home</div>} />
           <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
         </div>
@@ -28,5 +28,6 @@ class App extends Component {
     );
   }
 }
-
+//When the path matches the URL, the Route will call the function inside render and
+// pass in the current information available about the route, including the URL path that caused the Route to render. 
 export default App;
